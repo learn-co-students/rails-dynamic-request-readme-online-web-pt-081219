@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
-  get "posts/:id", to: "posts#show"
+  #one way of coding 
+  #get "posts/:id", to: "posts#show"
 
+  #more abstract way
+  resources :posts, only: :show
 end
